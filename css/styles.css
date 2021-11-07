@@ -240,7 +240,7 @@ img {
   align-items: baseline;
 }
 
-.footer-container-right {
+.footer-container-links {
   margin-left: 70px;
 }
 
@@ -298,6 +298,62 @@ img {
 
 .footer-contacts-link {
   display: inline-block;
+}
+
+.footer-container-subscribe {
+  margin-left: 93px;
+}
+
+.subscribe-form {
+  display: flex;
+}
+
+.subscribe-form-title {
+  font-size: 14px;
+
+  font-weight: 700;
+  line-height: 1.14;
+  letter-spacing: 0.03em;
+  text-align: left;
+  text-transform: uppercase;
+  color: var(--main-title-color);
+  margin-bottom: 20px;
+}
+
+.subscribe-form-input {
+  background-color: var(--background-color-dark);
+  border-style: solid;
+  border-color: rgba(255, 255, 255, 0, 3);
+  border-radius: 4px;
+  width: 358px;
+  padding: 15px 16px;
+
+  font-size: 16px;
+
+  line-height: 1.25;
+  letter-spacing: 0.03em;
+  text-align: left;
+  color: var(--button-focus-color);
+}
+
+.subscribe-btn {
+  padding: 10px 28px 10px 29px;
+  cursor: pointer;
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-left: 12px;
+  color: var(--button-focus-color);
+  background-color: var(--focus-color);
+  border-style: none;
+}
+
+.subscribe-icon {
+  width: 24px;
+  height: 24px;
+  margin-left: 10px;
+  fill: var(--button-focus-color);
 }
 
 /*-studio page-*/
@@ -741,7 +797,7 @@ img {
 
 .modal {
   width: 528px;
-  height: 581px;
+  padding: 40px;
   background-color: #ffffff;
   border-radius: 4px;
   box-shadow: 0px 2px 1px 0px rgba(0, 0, 0, 0.2),
@@ -751,6 +807,38 @@ img {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+
+  display: flex;
+  flex-direction: column;
+}
+
+.backdrop-form {
+  display: flex;
+  flex-direction: column;
+}
+
+.backdrop-label {
+  display: block;
+
+  font-size: 12px;
+
+  line-height: 1.17;
+  letter-spacing: 0.01em;
+  text-align: left;
+  color: rgba(117, 117, 117, 1);
+}
+
+.backdrop-label + .backdrop-label {
+  margin-top: 10px;
+}
+
+.backdrop-input {
+  width: 100%;
+}
+
+.backdrop-submit-btn {
+  display: inline-block;
+  margin: 0 auto;
 }
 
 .close-btn {
@@ -768,9 +856,145 @@ img {
   top: 8px;
   right: 8px;
   cursor: pointer;
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .icon-close {
   width: 18px;
   height: 18px;
+}
+
+.close-btn:hover .icon-close,
+.close-btn:focus .icon-close {
+  fill: var(--focus-color);
+}
+
+.backdrop-txt {
+  font-size: 20px;
+
+  font-weight: 700;
+  line-height: 1.17;
+  letter-spacing: 0.03em;
+  text-align: center;
+
+  margin-bottom: 12px;
+}
+
+.backdrop-input {
+  height: 40px;
+  padding-left: 40px;
+  border: solid;
+  border-width: 1px;
+  border-radius: 4px;
+  border-color: rgba(33, 33, 33, 0, 2);
+  transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.backdrop-input:focus {
+  border-color: var(--focus-color);
+}
+
+.backdrop-input:focus ~ .backdrop-input-icon {
+  fill: var(--focus-color);
+}
+
+.backdrop-input-box {
+  position: relative;
+}
+
+.backdrop-input-icon {
+  width: 18px;
+  height: 18px;
+  position: absolute;
+  top: 50%;
+  left: 12px;
+  transform: translateY(-50%);
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.backdrop-textarea {
+  display: block;
+  width: 100%;
+  padding: 12px 16px;
+  resize: none;
+  height: 120px;
+  border: solid;
+  border-width: 1px;
+  border-radius: 4px;
+  border-color: rgba(33, 33, 33, 0, 2);
+}
+
+.backdrop-textarea::placeholder {
+  font-size: 14px;
+
+  line-height: 1.14;
+  letter-spacing: 0.01em;
+  text-align: left;
+
+  color: rgba(117, 117, 117, 0, 5);
+}
+
+.backdrop-checkbox-label {
+  font-size: 14px;
+
+  line-height: 1.71;
+  letter-spacing: 0.03em;
+  text-align: left;
+  color: rgba(117, 117, 117, 1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.backdrop-textarea {
+  margin-bottom: 20px;
+}
+
+.backdrop-checkbox-label::before {
+  content: "";
+  display: inline-block;
+  width: 16px;
+  height: 15px;
+  border: solid;
+  border-color: rgba(33, 33, 33, 1);
+  border-width: 2px;
+  border-radius: 2px;
+  margin-right: 8.38px;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.backdrop-input-checkbox:checked + .backdrop-checkbox-label::before {
+  background-image: url(../images/tick.png);
+  background-color: rgba(33, 150, 243, 1);
+  background-repeat: no-repeat;
+  background-position: center;
+  border-width: 0;
+}
+
+.backdrop-submit-btn {
+  margin-top: 30px;
+  padding: 10px 55px 10px 56px;
+
+  font-size: 16px;
+
+  font-weight: 700;
+  line-height: 1.88;
+  letter-spacing: 0.06em;
+  text-align: center;
+  color: var(--button-focus-color);
+  cursor: pointer;
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.15);
+  border-width: 0;
+  border-radius: 4px;
+  background-color: var(--button-background-focus-color);
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.backdrop-submit-btn:hover,
+.backdrop-submit-btn:focus {
+  background-color: #188ce8;
+}
+
+.agreement-terms {
+  color: #2196f3;
 }
