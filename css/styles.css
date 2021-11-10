@@ -240,6 +240,10 @@ img {
   align-items: baseline;
 }
 
+.footer-container-contacts {
+  flex-grow: 1;
+}
+
 .footer-container-links {
   margin-left: 70px;
 }
@@ -322,8 +326,9 @@ img {
 
 .subscribe-form-input {
   background-color: var(--background-color-dark);
-  border-style: solid;
-  border-color: rgba(255, 255, 255, 0, 3);
+  border: solid;
+  border-color: rgba(255, 255, 255, 0.3);
+  border-width: 1px;
   border-radius: 4px;
   width: 358px;
   padding: 15px 16px;
@@ -832,8 +837,8 @@ img {
   margin-top: 10px;
 }
 
-.backdrop-input {
-  width: 100%;
+.backdrop-label-textarea {
+  margin-bottom: 20px;
 }
 
 .backdrop-submit-btn {
@@ -878,15 +883,17 @@ img {
   text-align: center;
 
   margin-bottom: 12px;
+  color: #212121;
 }
 
 .backdrop-input {
   height: 40px;
+  width: 100%;
   padding-left: 40px;
   border: solid;
   border-width: 1px;
   border-radius: 4px;
-  border-color: rgba(33, 33, 33, 0, 2);
+  border-color: rgba(33, 33, 33, 0.2);
   transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
@@ -900,6 +907,8 @@ img {
 
 .backdrop-input-box {
   position: relative;
+  margin-top: 4px;
+  display: block;
 }
 
 .backdrop-input-icon {
@@ -908,12 +917,14 @@ img {
   position: absolute;
   top: 50%;
   left: 12px;
+  fill: rgba(33, 33, 33, 1);
   transform: translateY(-50%);
   transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .backdrop-textarea {
   display: block;
+  margin-top: 4px;
   width: 100%;
   padding: 12px 16px;
   resize: none;
@@ -921,7 +932,7 @@ img {
   border: solid;
   border-width: 1px;
   border-radius: 4px;
-  border-color: rgba(33, 33, 33, 0, 2);
+  border-color: rgba(33, 33, 33, 0.2);
 }
 
 .backdrop-textarea::placeholder {
@@ -944,10 +955,6 @@ img {
   display: flex;
   align-items: center;
   justify-content: center;
-}
-
-.backdrop-textarea {
-  margin-bottom: 20px;
 }
 
 .backdrop-checkbox-label::before {

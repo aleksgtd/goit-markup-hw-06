@@ -650,6 +650,7 @@
                 type="email"
                 class="subscribe-form-input"
                 placeholder="E-mail"
+                name="subscribe_email"
               />
             </label>
             <button type="submit" class="subscribe-btn">
@@ -669,36 +670,38 @@
       <div class="modal">
         <p class="backdrop-txt">Оставьте свои данные, мы вам перезвоним</p>
         <form class="backdrop-form">
-          <label for="" class="backdrop-label"
+          <label class="backdrop-label"
             >Имя
             <span class="backdrop-input-box">
-              <input type="text" class="backdrop-input" />
+              <input type="text" class="backdrop-input" name="user_name" />
               <svg class="backdrop-input-icon">
                 <use href="./images/icons.svg#icon-person"></use>
               </svg>
             </span>
           </label>
-          <label for="" class="backdrop-label"
+          <label class="backdrop-label"
             >Телефон
             <span class="backdrop-input-box">
-              <input type="text" class="backdrop-input" /><svg
+              <input type="tel" class="backdrop-input" name="user_tel" /><svg
                 class="backdrop-input-icon"
               >
                 <use href="./images/icons.svg#icon-phone"></use>
               </svg>
             </span>
           </label>
-          <label for="" class="backdrop-label"
+          <label class="backdrop-label"
             >Почта
             <span class="backdrop-input-box">
-              <input type="text" class="backdrop-input" /><svg
-                class="backdrop-input-icon"
-              >
+              <input
+                type="email"
+                class="backdrop-input"
+                name="user_email"
+              /><svg class="backdrop-input-icon">
                 <use href="./images/icons.svg#icon-email"></use>
               </svg>
             </span>
           </label>
-          <label for="" class="backdrop-label"
+          <label class="backdrop-label backdrop-label-textarea"
             >Комментарий
             <textarea
               class="backdrop-textarea"
